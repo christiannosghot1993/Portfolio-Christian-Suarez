@@ -33,7 +33,7 @@ export default function Home() {
          <Portfolio />
          {info.socialNetworks.map((sn, index) => {
             return (
-               <a href={sn.url} target="_blank">
+               <a href={sn.url} target="_blank" rel="noreferrer">
                   <img key={index}
                      src={sn.image}
                      alt={sn.name}
