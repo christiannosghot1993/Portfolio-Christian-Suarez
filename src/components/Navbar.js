@@ -46,33 +46,6 @@ const links = [
     }
 ]
 
-// export default function Navbar({darkMode, handleClick}) {
-//     // const location = useLocation()
-//     // const [active, setActive] = useState(location.pathname === '/' ? 'home' : location.pathname.slice(1, location.pathname.length));
-
-//     return (
-//         <Box component={'nav'} width={'100%'} position={'fixed'} sx={{backgroundColor:'#f1f2ee', boxShadow:'0px 0px 5px 0px', zIndex:'1'}}>
-//             <Box component={'ul'} display={'flex'} justifyContent={'center'} alignItems={'center'}
-//                  gap={{xs: '2rem', md: '8rem'}}
-//                  textTransform={'lowercase'} fontSize={'1rem'} >
-//                 {links.map((link, index) => (
-//                     <Box key={index} component={'li'} //className={(link.active === active && !link.type) && Style.active}
-//                          sx={{borderImageSource: info.gradient}}>
-//                         <a //onClick={() => setActive(link.active)} 
-//                         href={link.to}> 
-//                         {!link.type && <p style={{paddingBottom: '0.5rem'}}>{link.name}</p>}
-//                             {link.type && <h1>{link.name}</h1>}
-//                         </a>
-//                     </Box>
-//                 ))}
-//                 <li>
-//                     <Toggler darkMode={darkMode} handleClick={handleClick}/>
-//                 </li>
-//             </Box>
-//         </Box>
-//     )
-// }
-
 const drawerWidth = 240;
 const styles = {
     navBarLight: {
@@ -109,16 +82,16 @@ export default function Navbar({ darkMode, handleClick }) {
     }
 
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', height:'100%' }} style={darkMode ? styles.navBarHoverDark : styles.navBarLight}>
             <Typography variant="h6" sx={{ my: 2 }}>
-                MUIx
+                <Toggler darkMode={darkMode} handleClick={handleClick} />
             </Typography>
             <Divider />
             <List>
                 {links.map((item, index) => (
                     <ListItem key={index} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center', color: 'red' }} href={item.to}>
-                            <ListItemText primary={item.name} />
+                        <ListItemButton sx={{ textAlign: 'center'}} href={item.to}>
+                            <ListItemText primary={item.name} style={darkMode?{color:'white'}:{color:'black'}}/>
                         </ListItemButton>
                     </ListItem>
                 ))}
@@ -150,7 +123,7 @@ export default function Navbar({ darkMode, handleClick }) {
                         {links.map((item, index) => (
                             <Button
                                 key={index}
-                                sx={{color:'black'}}
+                                sx={{ color: 'black' }}
                                 onClick={() => handleClickButtonNavBar(item.to)}
                             >
                                 {item.name}
