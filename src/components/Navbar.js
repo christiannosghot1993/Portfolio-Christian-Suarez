@@ -90,8 +90,8 @@ export default function Navbar({ darkMode, handleClick }) {
             <List>
                 {links.map((item, index) => (
                     <ListItem key={index} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center'}} href={item.to}>
-                            <ListItemText primary={item.name} style={darkMode?{color:'white'}:{color:'black'}}/>
+                        <ListItemButton sx={{ textAlign: 'center'}} >
+                            <ListItemText primary={item.name} style={darkMode?{color:'white'}:{color:'black'}} onClick={() => handleClickButtonNavBar(item.to)}/>
                         </ListItemButton>
                     </ListItem>
                 ))}
