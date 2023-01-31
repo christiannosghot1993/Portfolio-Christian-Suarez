@@ -7,7 +7,6 @@ const iconClass = "fa fa-circle";
 
 function Terminal(props) {
    const {text} = props;
-
    return (
       <Box component={'section'} className={classNames(Style.terminal, Style.shadowed)}
            width={{xs: '90%', md: '80%'}} borderRadius={'0.5rem'} mb={'4rem'}>

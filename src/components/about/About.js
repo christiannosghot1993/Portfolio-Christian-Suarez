@@ -29,13 +29,13 @@ export default function About() {
                 className={Style.green}>(main)</span> $</span> ls</p>
             <ul>
                 {info.experience.map((work, index) => (
-                    <>
+                    <div key={index}>
                         <p style={{ color: info.baseColor }}> {work.institution} | {work.date}</p>
                         <p>{work.activities}</p>
-                        {work.list.map((ls, _index)=>(
-                            <li style={{listStyleType:'disc', marginLeft:'20px', marginTop:'0px', marginBottom:'0px'}} key={_index}>{ls}</li>
+                        {work.list.map((ls, _index) => (
+                            <li style={{ listStyleType: 'disc', marginLeft: '20px', marginTop: '0px', marginBottom: '0px' }} key={_index}>{ls}</li>
                         ))}
-                    </>
+                    </div>
                 ))}
             </ul>
         </>;
@@ -84,11 +84,11 @@ export default function About() {
     }
     return (
         <Box display={'flex'} flexDirection={'column'} alignItems={'center'} mt={'3rem'}>
-            <h1 style={{ paddingBlockEnd: '10px' }}>Acerca de mí</h1>
+            <h1 id='about' style={{ paddingBlockEnd: '10px' }}>Acerca de mí</h1>
             <Terminal text={aboutMeText()} />
-            <h1 style={{ paddingBlockEnd: '10px' }}>Tecnologías que manejo</h1>
+            <h1 id='technologies' style={{ paddingBlockEnd: '10px' }}>Tecnologías que manejo</h1>
             <Terminal text={skillsText()} />
-            <h1 style={{ paddingBlockEnd: '10px' }}>Experiencia</h1>
+            <h1 id='experience' style={{ paddingBlockEnd: '10px' }}>Experiencia</h1>
             <Terminal text={experienceText()} />
         </Box>
     )
