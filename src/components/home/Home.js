@@ -6,7 +6,7 @@ import EmojiBullet from "./EmojiBullet";
 import { Box } from "@mui/material";
 import { info } from "../../info/Info";
 import About from '../about/About';
-import Portfolio from '../portfolio/Portfolio';
+// import Portfolio from '../portfolio/Portfolio';
 
 export default function Home() {
 
