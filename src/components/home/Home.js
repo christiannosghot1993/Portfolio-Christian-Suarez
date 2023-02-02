@@ -30,8 +30,9 @@ export default function Home() {
                </Box>
             </Box>
          <About/>
-         <h1 id='portfolio' style={{ paddingBlockEnd: '10px', textAlign: 'center' }}>Proyectos</h1>
-         <Portfolio />
+         <h1 id='portfolio' style={{ paddingBlockEnd: '10px', textAlign: 'center' }}>Proyectos en espera de publicación</h1>
+         <p style={{textAlign:'center'}}>Disponibles muy pronto....</p>
+         {/* <Portfolio /> */}
          {info.socialNetworks.map((sn, index) => {
             return (
                <a href={sn.url} target="_blank" rel="noreferrer" key={index}>

@@ -10,9 +10,9 @@ export default function BaseLayout() {
    }
 
    return (
-      <Box className={darkMode ? Style.dark : Style.light}>
-         <Grid container display={'flex'} flexDirection={'column'} minHeight={'100vh'}
-               justifyContent={'space-between'}>
+      <Box className={darkMode ? Style.dark : Style.light} style={{padding:'0px'}}>
+         <Grid container display={'flex'} flexDirection={'column'} minHeight={'100vh'} 
+               justifyContent={'space-between'} style={{padding:'0px'}}>
             <Grid item>
             <Navbar darkMode={darkMode} handleClick={handleClick}/>
             </Grid>
@@ -24,7 +24,6 @@ export default function BaseLayout() {
             </Grid>
          </Grid>
       </Box>
-      // <Navbar darkMode={darkMode} handleClick={handleClick}/>
    )
 }
 
