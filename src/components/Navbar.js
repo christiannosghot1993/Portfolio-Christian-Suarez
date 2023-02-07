@@ -148,7 +148,7 @@ export default function Navbar({ darkMode, handleClick }) {
                     {drawer}
                 </Drawer>
             </Box>
-            <Box component="main" >
+            <Box component="main" sx={{pt:3}}>
                 <Toolbar />
                 <Home />
             </Box>

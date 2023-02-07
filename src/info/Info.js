@@ -1,9 +1,5 @@
-import self from "../img/self.png"
-import mock1 from "../img/mock1.png"
-import mock2 from "../img/mock2.png"
-import mock3 from "../img/mock3.png"
-import mock4 from "../img/mock4.png"
-import mock5 from "../img/mock5.png"
+import pokeApi from "../img/poke-api.png"
+import noxus from "../img/noxus.png"
 import cSharp from "../img/c-sharp.png"
 import scrum from "../img/scrum.png"
 import azure from "../img/azure.png"
@@ -25,6 +21,8 @@ import facebookIcon from '../img/facebook.png'
 import githubIcon from '../img/github.png'
 import linkedinIcon from '../img/linkedin.png'
 import whatsappIcon from '../img/whatsapp.png'
+import portfolio from '../img/portfolio.png'
+
 
 export let colors = ["rgb(0,255,164)", "rgb(166,104,255)"];
 
@@ -33,7 +31,6 @@ export const info = {
     lastName: "Suarez",
     initials: "CS",
     position: "Ingeniero de software",
-    selfPortrait: self,
     gradient: `-webkit-linear-gradient(135deg, ${colors})`,
     baseColor: colors[0],
     miniBio: [
@@ -215,34 +212,39 @@ export const info = {
     ],
     portfolio: [
         {
-            title: "Project 1",
-            live: "https://paytonpierce.dev",
-            source: "https://github.com/paytonjewell",
-            image: mock1
+            title: "Poke API Logic Studio",
+            description:'Prueba técnica FrontEnd Angular Senior - Logic Studio S.A. Desarrollada con Angular.',
+            live: "https://poke-api-ls.netlify.app/",
+            source: "https://github.com/christiannosghot1993/poke-api-ls",
+            image: pokeApi
         },
         {
-            title: "Project 2",
-            live: "https://paytonpierce.dev",
-            source: "https://github.com/paytonjewell",
-            image: mock2
+            title: "Portfolio Christian Suárez",
+            description:'Portafolio profesional desarrollado con ReactJs y Material UI.',
+            live: "https://christian-suarez-dev.site/",
+            source: "https://github.com/christiannosghot1993/Portfolio-Christian-Suarez",
+            image: portfolio
         },
         {
-            title: "Project 3",
-            live: "https://paytonpierce.dev",
-            source: "https://github.com/paytonjewell",
-            image: mock3
+            title: "Noxus",
+            description:'Sistema de control de asistencia por gps, construido con .Net Core, Razor Pages, Javascript y Boostrap',
+            live: "https://www.noxus.somee.com/",
+            source: "https://github.com/christiannosghot1993/Noxus",
+            image: noxus
         },
-        {
+        /*{
             title: "Project 4",
+            description:'asd',
             live: "https://paytonpierce.dev",
             source: "https://github.com/paytonjewell",
             image: mock4
         },
         {
             title: "Project 5",
+            description:'asd',
             live: "https://paytonpierce.dev",
             source: "https://github.com/paytonjewell",
             image: mock5
-        }
+        }*/
     ]
 }

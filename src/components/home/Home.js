@@ -6,7 +6,7 @@ import EmojiBullet from "./EmojiBullet";
 import { Box } from "@mui/material";
 import { info } from "../../info/Info";
 import About from '../about/About';
-// import Portfolio from '../portfolio/Portfolio';
+import Portfolio from '../portfolio/Portfolio';
 
 export default function Home() {
 
@@ -30,9 +30,8 @@ export default function Home() {
                </Box>
             </Box>
          <About/>
-         <h1 id='portfolio' style={{ paddingBlockEnd: '10px', textAlign: 'center' }}>Proyectos en espera de publicación</h1>
-         <p style={{textAlign:'center'}}>Disponibles muy pronto....</p>
-         {/* <Portfolio /> */}
+         <h1 id='portfolio' style={{ paddingBlockEnd: '10px', textAlign: 'center' }}>Proyectos </h1>
+         <Portfolio />
          {info.socialNetworks.map((sn, index) => {
             return (
                <a href={sn.url} target="_blank" rel="noreferrer" key={index}>
