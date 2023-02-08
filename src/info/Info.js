@@ -228,7 +228,7 @@ export const info = {
         },
         {
             title: "Noxus",
-            description:'Sistema de control de asistencia por gps, construido con .Net Core, Razor Pages, Javascript, Boostrap, Closed Xml para reportería y Base de Datos Sql Server',
+            description:'Sistema de control de asistencia por gps, construido con .Net Core, Razor Pages, Javascript, Boostrap, Closed Xml para reportería y Base de Datos Sql Server.',
             live: "https://www.noxus.somee.com/",
             source: "https://github.com/christiannosghot1993/Noxus",
             image: noxus
