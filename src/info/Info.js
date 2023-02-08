@@ -22,6 +22,7 @@ import githubIcon from '../img/github.png'
 import linkedinIcon from '../img/linkedin.png'
 import whatsappIcon from '../img/whatsapp.png'
 import portfolio from '../img/portfolio.png'
+import eightbits from '../img/8bits.png'
 
 
 export let colors = ["rgb(0,255,164)", "rgb(166,104,255)"];
@@ -227,24 +228,17 @@ export const info = {
         },
         {
             title: "Noxus",
-            description:'Sistema de control de asistencia por gps, construido con .Net Core, Razor Pages, Javascript y Boostrap',
+            description:'Sistema de control de asistencia por gps, construido con .Net Core, Razor Pages, Javascript, Boostrap, Closed Xml para reportería y Base de Datos Sql Server',
             live: "https://www.noxus.somee.com/",
             source: "https://github.com/christiannosghot1993/Noxus",
             image: noxus
         },
-        /*{
-            title: "Project 4",
-            description:'asd',
-            live: "https://paytonpierce.dev",
-            source: "https://github.com/paytonjewell",
-            image: mock4
-        },
         {
-            title: "Project 5",
-            description:'asd',
-            live: "https://paytonpierce.dev",
-            source: "https://github.com/paytonjewell",
-            image: mock5
-        }*/
+            title: "8-bits",
+            description:'Página web simple estilo Retro Arcade, creada con Html, Css y Javascript puro. Este proyecto fue construido para comprender y manipular el DOM nativamente.',
+            live: "https://portfolio-8bits-cs.netlify.app/",
+            source: "https://github.com/christiannosghot1993/8-bits",
+            image: eightbits
+        },
     ]
 }
