@@ -1,5 +1,6 @@
 import pokeApi from "../img/poke-api.png"
 import noxus from "../img/noxus.png"
+import tpvsigno from "../img/tpvsigno.png"
 import cSharp from "../img/c-sharp.png"
 import scrum from "../img/scrum.png"
 import azure from "../img/azure.png"
@@ -229,7 +230,7 @@ export const info = {
         {
             title: "Noxus",
             description:'Sistema de control de asistencia por gps, construido con .Net Core, Razor Pages, Javascript, Boostrap, Closed Xml para reportería y Base de Datos Sql Server.',
-            live: "https://www.noxus.somee.com/",
+            live: "https://www.noxus-assistance.somee.com/",
             source: "https://github.com/christiannosghot1993/Noxus",
             image: noxus
         },
@@ -239,6 +240,13 @@ export const info = {
             live: "https://portfolio-8bits-cs.netlify.app/",
             source: "https://github.com/christiannosghot1993/8-bits",
             image: eightbits
+        },
+        {
+            title: "Tpv-Signo",
+            description:'Sistema de facturación electrónica e inventarios Ecuador. Desarrollado con Asp.Net Web Forms, Javascript, Ext.net y Sql Server. Nota: No es responsive debido a que este sistema fue desarrollado para ejecutarse en máquinas pos táctiles.',
+            live: "https://tpvsigno.somee.com/Login.aspx",
+            source: "https://github.com/christiannosghot1993/TpvSignoNormalOriginal",
+            image: tpvsigno
         },
     ]
 }

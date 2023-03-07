@@ -21,6 +21,16 @@ function PortfolioBlock(props) {
                      </div>
                   )
                }
+               if (title === 'Tpv-Signo') {
+                  return (
+                     <div style={{ width: '50%', textAlign: 'justify', fontSize:'small' }}>
+                        <p>Credenciales para ingresar al sistema:</p>
+                        <div>
+                           Usuario: administrador, Contraseña: 4862
+                        </div>                        
+                     </div>
+                  )
+               }
             })()
          }
          <Box className={'portfolio'} display={'flex'} flexDirection={'column'} gap={'0.5rem'}
