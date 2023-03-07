@@ -24,12 +24,13 @@ export default function Toggler({ darkMode, handleClick, spanish, handleLanguage
          <Box fontSize={'1.5rem'} sx={{ cursor: 'pointer', ":hover": { transform: 'translateY(-3px)', transition: transition }, paddingTop:'9px', paddingLeft:'30px' }}>
             {
                spanish ?
-                  <span onClick={handleLanguage} aria-label="Full Moon" role="img">
-                     <img src={spain} alt='spanish'></img>
+                  <span onClick={handleLanguage} aria-label="English" role="img">
+                     
+                     <img src={unitedkingdom} alt='english'></img>
                   </span>
                   :
-                  <span onClick={handleLanguage} aria-label="New Moon" role="img">
-                     <img src={unitedkingdom} alt='english'></img>
+                  <span onClick={handleLanguage} aria-label="Spanish" role="img">
+                     <img src={spain} alt='spanish'></img>
                   </span>
             }
          </Box>
