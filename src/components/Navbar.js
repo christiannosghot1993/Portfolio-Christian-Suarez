@@ -22,27 +22,62 @@ const links = [
     {
         name: 'Inicio',
         to: 'home',
-        active: 'home'
+        active: 'home',
+        language: 'spanish'
     },
     {
         name: 'Acerca de mí',
         to: 'about',
-        active: 'about'
+        active: 'about',
+        language: 'spanish'
     },
     {
         name: 'Tecnologías que uso',
         to: 'technologies',
-        active: 'techonologies'
+        active: 'techonologies',
+        language: 'spanish'
     },
     {
         name: 'Experiencia',
         to: 'experience',
-        active: 'experience'
+        active: 'experience',
+        language: 'spanish'
     },
     {
         name: 'Proyectos',
         to: 'portfolio',
-        active: 'portfolio'
+        active: 'portfolio',
+        language: 'spanish'
+    },
+    {
+        name: 'Home',
+        to: 'home',
+        active: 'home',
+        language: 'english'
+    },
+    {
+        name: 'About me',
+        to: 'about',
+        active: 'about',
+        language: 'english'
+    },
+    {
+        name: 'Technologies',
+        to: 'technologies',
+        active: 'techonologies',
+        language: 'english'
+    },
+    {
+        name: 'Experiencie',
+        to: 'experience',
+        active: 'experience',
+        language: 'english'
+    },
+    {
+        name: 'Projects',
+        to: 'portfolio',
+        active: 'portfolio',
+        language: 'english'
     }
 ]
 
@@ -68,7 +103,7 @@ const styles = {
     }
 }
 
-export default function Navbar({ darkMode, handleClick }) {
+export default function Navbar({ darkMode, handleClick, spanish, handleLanguage }) {
 
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -82,19 +117,29 @@ export default function Navbar({ darkMode, handleClick }) {
     }
 
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', height:'100%' }} style={darkMode ? styles.navBarHoverDark : styles.navBarLight}>
+        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', height: '100%' }} style={darkMode ? styles.navBarHoverDark : styles.navBarLight}>
             <Typography variant="h6" sx={{ my: 2 }}>
                 <Toggler darkMode={darkMode} handleClick={handleClick} />
             </Typography>
             <Divider />
             <List>
-                {links.map((item, index) => (
-                    <ListItem key={index} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center'}} >
-                            <ListItemText primary={item.name} style={darkMode?{color:'white'}:{color:'black'}} onClick={() => handleClickButtonNavBar(item.to)}/>
-                        </ListItemButton>
-                    </ListItem>
-                ))}
+                {
+                    spanish ?
+                        links.filter((lnk) => lnk.language === 'spanish').map((item, index) => (
+                            <ListItem key={index} disablePadding>
+                                <ListItemButton sx={{ textAlign: 'center' }} >
+                                    <ListItemText primary={item.name} style={darkMode ? { color: 'white' } : { color: 'black' }} onClick={() => handleClickButtonNavBar(item.to)} />
+                                </ListItemButton>
+                            </ListItem>
+                        )) :
+                        links.filter((lnk) => lnk.language === 'english').map((item, index) => (
+                            <ListItem key={index} disablePadding>
+                                <ListItemButton sx={{ textAlign: 'center' }} >
+                                    <ListItemText primary={item.name} style={darkMode ? { color: 'white' } : { color: 'black' }} onClick={() => handleClickButtonNavBar(item.to)} />
+                                </ListItemButton>
+                            </ListItem>
+                        ))
+                }
             </List>
         </Box>
     );
@@ -117,18 +162,30 @@ export default function Navbar({ darkMode, handleClick }) {
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                     >
-                        <Toggler darkMode={darkMode} handleClick={handleClick} />
+                        <Toggler darkMode={darkMode} handleClick={handleClick} spanish={spanish} handleLanguage={handleLanguage} />
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                        {links.map((item, index) => (
-                            <Button
-                                key={index}
-                                sx={{ color: 'black' }}
-                                onClick={() => handleClickButtonNavBar(item.to)}
-                            >
-                                {item.name}
-                            </Button>
-                        ))}
+                        {
+                            spanish ?
+                            links.filter(lnk=>lnk.language==='spanish').map((item, index) => (
+                                <Button
+                                    key={index}
+                                    sx={{ color: 'black' }}
+                                    onClick={() => handleClickButtonNavBar(item.to)}
+                                >
+                                    {item.name}
+                                </Button>
+                            )) :
+                            links.filter(lnk=>lnk.language==='english').map((item, index) => (
+                                <Button
+                                    key={index}
+                                    sx={{ color: 'black' }}
+                                    onClick={() => handleClickButtonNavBar(item.to)}
+                                >
+                                    {item.name}
+                                </Button>
+                            ))
+                        }
                     </Box>
                 </Toolbar>
             </AppBar>
@@ -148,7 +205,7 @@ export default function Navbar({ darkMode, handleClick }) {
                     {drawer}
                 </Drawer>
             </Box>
-            <Box component="main" sx={{pt:3}}>
+            <Box component="main" sx={{ pt: 3 }}>
                 <Toolbar />
                 <Home />
             </Box>

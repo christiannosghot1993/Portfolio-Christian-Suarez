@@ -8,13 +8,18 @@ export default function BaseLayout() {
    function handleClick() {
       setDarkMode(!darkMode);
    }
+   const [spanish, setSpanish]=useState(false);
+
+   function handleLanguage(){
+      setSpanish(!spanish);
+   }
 
    return (
       <Box className={darkMode ? Style.dark : Style.light}>
          <Grid container display={'flex'} flexDirection={'column'} minHeight={'100vh'}
             justifyContent={'space-between'} >
             <Grid item>
-               <Navbar darkMode={darkMode} handleClick={handleClick} />
+               <Navbar darkMode={darkMode} handleClick={handleClick} spanish={spanish} handleLanguage={handleLanguage} />
             </Grid>
             <Grid item>
                <Box component={'footer'} display={'flex'} flexDirection={'column'} alignItems={'center'}
